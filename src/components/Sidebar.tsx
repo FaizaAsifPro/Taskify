@@ -100,7 +100,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           </div>
           <div className="min-w-0">
             <div className="text-sm font-bold font-display tracking-tight text-white flex items-center gap-1.5 truncate">
-              AURATASK
+              Taskify
               <span 
                 className="text-[9px] font-mono px-1.5 py-0.2 rounded font-semibold shrink-0"
                 style={{

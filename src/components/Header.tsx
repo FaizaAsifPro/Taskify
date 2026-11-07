@@ -122,7 +122,7 @@ export const Header: React.FC<HeaderProps> = ({
         </button>
 
         <div className="flex items-center gap-2 text-sm whitespace-nowrap">
-          <span className="font-bold text-white tracking-tight">AURATASK</span>
+          <span className="font-bold text-white tracking-tight">Taskify</span>
           <span className="text-neutral-500">/</span>
           <span className="text-[var(--app-accent)] font-medium">{viewTitles[activeView]}</span>
         </div>
