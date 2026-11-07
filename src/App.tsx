@@ -142,16 +142,17 @@ export default function App() {
         }
       });
 
-      if (triggered.length > 0) {
-        // If new alerts arrived that weren't in activeAlerts, play sound
-        const currentAlertIds = new Set(activeAlerts.map((a) => a.id));
-        const hasBrandNew = triggered.some((t) => !currentAlertIds.has(t.id));
+      const alertsAreUnchanged =
+        activeAlerts.length === triggered.length &&
+        activeAlerts.every((alert, index) => alert === triggered[index]);
+
+      if (!alertsAreUnchanged) {
+        const currentAlertIds = new Set(activeAlerts.map((alert) => alert.id));
+        const hasBrandNew = triggered.some((reminder) => !currentAlertIds.has(reminder.id));
         if (hasBrandNew && settings.soundEnabled) {
           playReminderChime();
         }
         setActiveAlerts(triggered);
-      } else {
-        setActiveAlerts([]);
       }
     };
 
