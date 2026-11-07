@@ -1,0 +1,6 @@
+{
+  "name": "AuraTask — Notes, Reminders & Planner",
+  "description": "Executive black and gold productivity suite for taking notes, time-based reminders, and organizing to-do tasks across days, weeks, and months.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

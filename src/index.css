@@ -1,0 +1,217 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-display: 'Outfit', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Default: Velvet Burgundy & Matcha Rose */
+    --app-canvas: #1b0712;
+    --app-sidebar: #13040d;
+    --app-header: #170610;
+    --app-surface: #260a1a;
+    --app-surface-hover: #330e23;
+    --app-elevated: #3f122c;
+    --app-border: #52183a;
+    --app-border-hover: #732252;
+    --app-accent: #a3e635;          /* Fresh Matcha Light Green */
+    --app-accent-hover: #bef264;
+    --app-accent-text: #142304;
+    --app-accent-secondary: #f472b6; /* Soft Blush Pink */
+    --app-accent-secondary-subtle: rgba(244, 114, 182, 0.15);
+    --app-accent-tertiary: #fbcfe8;  /* Rose Tint */
+    --app-glow: rgba(163, 230, 53, 0.22);
+    --app-text-primary: #fdf2f8;
+    --app-text-muted: #d4a5b9;
+  }
+
+  /* 1. Velvet Burgundy & Matcha Rose (Burgundy - Light Green - Pink) */
+  .theme-burgundy-rose-mint {
+    --app-canvas: #1b0712;
+    --app-sidebar: #13040d;
+    --app-header: #170610;
+    --app-surface: #260a1a;
+    --app-surface-hover: #330e23;
+    --app-elevated: #3f122c;
+    --app-border: #52183a;
+    --app-border-hover: #732252;
+    --app-accent: #a3e635;          /* Fresh Matcha Light Green */
+    --app-accent-hover: #bef264;
+    --app-accent-text: #142304;
+    --app-accent-secondary: #f472b6; /* Soft Blush Pink */
+    --app-accent-secondary-subtle: rgba(244, 114, 182, 0.15);
+    --app-accent-tertiary: #fbcfe8;
+    --app-glow: rgba(163, 230, 53, 0.22);
+    --app-text-primary: #fdf2f8;
+    --app-text-muted: #d4a5b9;
+  }
+
+  /* 2. Obsidian & Pure Canary Gold */
+  .theme-obsidian-gold {
+    --app-canvas: #090a0d;
+    --app-sidebar: #0c0d11;
+    --app-header: #0b0c10;
+    --app-surface: #13151b;
+    --app-surface-hover: #1a1c24;
+    --app-elevated: #212530;
+    --app-border: #2b303f;
+    --app-border-hover: #3f465c;
+    --app-accent: #facc15;          /* Radiant Canary Gold */
+    --app-accent-hover: #fde047;
+    --app-accent-text: #000000;
+    --app-accent-secondary: #fef08a;
+    --app-accent-secondary-subtle: rgba(250, 204, 21, 0.15);
+    --app-accent-tertiary: #eab308;
+    --app-glow: rgba(250, 204, 21, 0.22);
+    --app-text-primary: #f8fafc;
+    --app-text-muted: #94a3b8;
+  }
+
+  /* 3. Espresso Mocha & Warm Caramel */
+  .theme-cyber-amber {
+    --app-canvas: #120b08;
+    --app-sidebar: #0e0806;
+    --app-header: #100a07;
+    --app-surface: #1e130e;
+    --app-surface-hover: #291a13;
+    --app-elevated: #36221a;
+    --app-border: #472c21;
+    --app-border-hover: #674030;
+    --app-accent: #f59e0b;          /* Warm Caramel Gold */
+    --app-accent-hover: #fbbf24;
+    --app-accent-text: #000000;
+    --app-accent-secondary: #fed7aa; /* Cream Latte */
+    --app-accent-secondary-subtle: rgba(245, 158, 11, 0.15);
+    --app-accent-tertiary: #d97706;
+    --app-glow: rgba(245, 158, 11, 0.22);
+    --app-text-primary: #fef3c7;
+    --app-text-muted: #d4b89b;
+  }
+
+  /* 4. Emerald Sage & Almond Gold */
+  .theme-emerald-midnight {
+    --app-canvas: #05120e;
+    --app-sidebar: #030d0a;
+    --app-header: #040f0c;
+    --app-surface: #0b221a;
+    --app-surface-hover: #102e23;
+    --app-elevated: #163d2f;
+    --app-border: #1e513e;
+    --app-border-hover: #296d54;
+    --app-accent: #6ee7b7;          /* Eucalyptus Sage */
+    --app-accent-hover: #a7f3d0;
+    --app-accent-text: #04261a;
+    --app-accent-secondary: #fde68a; /* Warm Almond Gold */
+    --app-accent-secondary-subtle: rgba(110, 231, 183, 0.15);
+    --app-accent-tertiary: #34d399;
+    --app-glow: rgba(110, 231, 183, 0.22);
+    --app-text-primary: #ecfdf5;
+    --app-text-muted: #a7d9c4;
+  }
+
+  /* 5. Midnight Lavender & Cherry Blossom */
+  .theme-royal-amethyst {
+    --app-canvas: #0c0915;
+    --app-sidebar: #08060f;
+    --app-header: #0a0712;
+    --app-surface: #18122a;
+    --app-surface-hover: #221a3a;
+    --app-elevated: #2d224d;
+    --app-border: #3d2f66;
+    --app-border-hover: #56428f;
+    --app-accent: #c4b5fd;          /* Misty Lavender */
+    --app-accent-hover: #ddd6fe;
+    --app-accent-text: #130a2a;
+    --app-accent-secondary: #f472b6; /* Cherry Blossom Pink */
+    --app-accent-secondary-subtle: rgba(196, 181, 253, 0.15);
+    --app-accent-tertiary: #fbcfe8;
+    --app-glow: rgba(196, 181, 253, 0.22);
+    --app-text-primary: #faf5ff;
+    --app-text-muted: #c4b5fd;
+  }
+
+  /* 6. Nordic Slate & Ice Aqua */
+  .theme-nordic-frost {
+    --app-canvas: #08101a;
+    --app-sidebar: #050b12;
+    --app-header: #060d15;
+    --app-surface: #101f30;
+    --app-surface-hover: #162b43;
+    --app-elevated: #1e3856;
+    --app-border: #284c75;
+    --app-border-hover: #38679e;
+    --app-accent: #38bdf8;          /* Glacial Ice Aqua */
+    --app-accent-hover: #7dd3fc;
+    --app-accent-text: #031c2c;
+    --app-accent-secondary: #e0f2fe; /* Ice White */
+    --app-accent-secondary-subtle: rgba(56, 189, 248, 0.15);
+    --app-accent-tertiary: #0ea5e9;
+    --app-glow: rgba(56, 189, 248, 0.22);
+    --app-text-primary: #f0f9ff;
+    --app-text-muted: #94a3b8;
+  }
+
+  /* 7. Crimson Noir & Rose Gold */
+  .theme-crimson-noir {
+    --app-canvas: #130407;
+    --app-sidebar: #0e0305;
+    --app-header: #100306;
+    --app-surface: #22080d;
+    --app-surface-hover: #2e0c13;
+    --app-elevated: #3c111a;
+    --app-border: #521824;
+    --app-border-hover: #742233;
+    --app-accent: #f87171;          /* Scarlet Rose */
+    --app-accent-hover: #fca5a5;
+    --app-accent-text: #200408;
+    --app-accent-secondary: #fef08a; /* Warm Ivory Gold */
+    --app-accent-secondary-subtle: rgba(248, 113, 113, 0.15);
+    --app-accent-tertiary: #fda4af;
+    --app-glow: rgba(248, 113, 113, 0.22);
+    --app-text-primary: #fff1f2;
+    --app-text-muted: #fca5a5;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--app-canvas);
+    color: var(--app-text-primary);
+    overflow-x: hidden;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom dark scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--app-canvas);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--app-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--app-accent);
+}
+
+/* Custom input date/time dark style */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.8) sepia(1) saturate(5) hue-rotate(5deg);
+  cursor: pointer;
+}
